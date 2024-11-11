@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jost&display=swap');
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: "poppins" ,sans-serif;
+}
+
+::selection {
+    background-color: #5f27cd;
+    color: white;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #e5b2f9;
+   
+}
+
+.letter {
+    display: none;
+}
+
+h3 {
+    font-size: 24px;
+    padding-bottom: 5px;
+    font-weight: 500;
+}
+
+input {
+    display: none;
+}
+
+label {
+    cursor: pointer;
+}
+
+.fa-solid ,
+.fa-regular {
+    display: flex !important;
+    align-items: center !important;
+    transform: translateX(-4px);
+    -webkit-transform: translateX(-4px);
+    -moz-transform: translateX(-4px);
+    -ms-transform: translateX(-4px);
+    -o-transform: translateX(-4px);
+    color: inherit;
+}
+
+.blog-letter ,
+.help-letter ,
+.code-letter ,
+.about-letter {
+    display: none;
+
+}
+
+
+.page {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: white;
+    width: 70%;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    box-shadow: 0px 0px 5px;
+}
+
+.main-title {
+    width: 100%;
+    padding: 20px;
+    transform: translateX(20px);
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 15px;
+}
+
+.left-side {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 20%;
+    height: 100%;
+    transform: translateY(-10px);
+}
+
+.left-side div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 110px;
+    padding: 15px;
+    font-weight: 500;
+}
+
+.left-side div:hover {
+    color: #5f27cd !important;
+}
+
+.left-side div:hover .fa-regular ,
+.left-side div:hover .fa-solid {
+    color: #5f27cd !important;
+}
+
+#option-1:checked ~ .left-side .home .fa-solid ,
+#option-2:checked ~ .left-side .blog .fa-solid ,
+#option-3:checked ~ .left-side .help .fa-regular ,
+#option-4:checked ~ .left-side .code .fa-solid ,
+#option-5:checked ~ .left-side .about .fa-regular ,
+#option-1:checked ~ .left-side .home ,
+#option-2:checked ~ .left-side .blog ,
+#option-3:checked ~ .left-side .help ,
+#option-4:checked ~ .left-side .code ,
+#option-5:checked ~ .left-side .about {
+    color: white !important;
+    transition-duration: 0.3s;
+}
+
+.indicator {
+    position: absolute;
+    top: 0;
+}
+
+input[type="radio"]:checked ~ .left-side .indicator {
+    width: 110px;
+    height: 40px;
+    position: absolute;
+    background-color: #5f27cd;
+    border-radius: 7px;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    -ms-border-radius: 7px;
+    -o-border-radius: 7px;
+    transition-duration: 0.5s;
+}
+
+#option-1:checked ~ .left-side .indicator {
+    transform: translateY(8px);
+    z-index: -1;
+}
+
+input[id="option-2"]:checked ~ .left-side .indicator {
+    transform: translateY(60px);
+    z-index: -1;
+    -webkit-transform: translateY(60px);
+    -moz-transform: translateY(60px);
+    -ms-transform: translateY(60px);
+    -o-transform: translateY(60px);
+}
+input[id="option-3"]:checked ~ .left-side .indicator {
+    transform: translateY(115px);
+    z-index: -1;
+    
+}
+input[id="option-4"]:checked ~ .left-side .indicator {
+    transform: translateY(169px);
+    z-index: -1;
+    
+}
+input[id="option-5"]:checked ~ .left-side .indicator {
+    transform: translateY(223px);
+    -webkit-transform: translateY(223px);
+    -moz-transform: translateY(223px);
+    -ms-transform: translateY(223px);
+    -o-transform: translateY(223px);
+    z-index: -1;
+}
+
+#option-1:checked ~ .right-side .home-letter,
+#option-2:checked ~ .right-side .blog-letter,
+#option-3:checked ~ .right-side .help-letter,
+#option-4:checked ~ .right-side .code-letter,
+#option-5:checked ~ .right-side .about-letter {
+    display: block;
+}
+
+.right-side {
+    width: 75%;
+    height: 100%;
+}
+
+
